@@ -1,0 +1,38 @@
+#N canvas 1256 48 633 485 10;
+#X msg 172 255 \; pd dsp 1;
+#X msg 271 255 \; pd dsp 0;
+#X obj 172 174 bng 15 250 50 0 empty Start_Live_Audio empty 17 7 0
+10 -262144 -1 -1;
+#X obj 300 175 bng 15 250 50 0 empty Stop_Live_Audio empty 17 7 0 10
+-262144 -1 -1;
+#X text 130 155 Start Live Audio;
+#X text 260 154 Stop Live Audio;
+#X obj 326 382 textfile;
+#X msg 282 336 clear;
+#X obj 370 260 load-file;
+#X obj 405 174 bng 15 250 50 0 empty Load_File empty 17 7 0 10 -262144
+-1 -1;
+#X msg 124 335 write analysis2.pfs cr;
+#X text 384 154 Load File;
+#X obj 19 10 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 373 333 formant-analyser;
+#X obj 454 259 adc~;
+#X connect 2 0 0 0;
+#X connect 2 0 13 0;
+#X connect 2 0 14 0;
+#X connect 3 0 1 0;
+#X connect 3 0 10 0;
+#X connect 3 0 7 0;
+#X connect 3 0 13 0;
+#X connect 7 0 6 0;
+#X connect 8 0 10 0;
+#X connect 8 0 13 0;
+#X connect 8 0 7 0;
+#X connect 8 1 13 1;
+#X connect 9 0 8 0;
+#X connect 9 0 13 0;
+#X connect 10 0 6 0;
+#X connect 13 0 6 0;
+#X connect 14 0 13 1;
+#X coords 0 -1 1 1 350 100 1 125 125;
