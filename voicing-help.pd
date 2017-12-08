@@ -1,0 +1,13 @@
+#N canvas 278 220 450 300 10;
+#X text 19 6 Voicing determines if the audio stream is voiced or unvoiced
+at the time of listening. Outputs 1 if voiced \, 63 if unoviced.;
+#X obj 77 65 adc~;
+#X obj 76 105 voicing;
+#X floatatom 76 148 5 0 0 0 - - -;
+#X msg 146 106 \; pd dsp 1;
+#X obj 145 62 loadbang;
+#X text 31 179 Try testing it out with a voiced (mmmm) and unvoiced
+(sssss) sound.;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 5 0 4 0;

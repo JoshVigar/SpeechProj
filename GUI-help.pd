@@ -1,0 +1,5 @@
+#N canvas 833 430 450 300 10;
+#X text 18 11 GUI - This is the user interface for the program. You
+can: Start Live Audio - this will record your voice and save it as
+a pfs file when you press... Stop Live Audio - this stops the recording
+and saves it to a pfs file.;
