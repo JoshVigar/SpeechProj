@@ -1,0 +1,23 @@
+#N canvas 177 476 450 300 10;
+#X obj 95 79 adc~;
+#X obj 94 110 formant-estimator;
+#X text 90 163 F1;
+#X text 125 182 A1;
+#X text 161 164 F2;
+#X text 192 181 A2;
+#X floatatom 84 142 5 0 0 0 - - -;
+#X floatatom 154 142 5 0 0 0 - - -;
+#X floatatom 189 163 5 0 0 0 - - -;
+#X floatatom 120 161 5 0 0 0 - - -;
+#X msg 247 123 \; pd dsp 1;
+#X obj 246 79 loadbang;
+#X text 15 4 Formant estimator makes an estimate of the 1st and 2nd
+formant frequencies(F1 & F2) and amplitudes(A1 & A2) by using bandpass
+filters and envolopes to gain an approximation of the true formant
+values.;
+#X connect 0 0 1 0;
+#X connect 1 0 6 0;
+#X connect 1 1 9 0;
+#X connect 1 2 7 0;
+#X connect 1 3 8 0;
+#X connect 11 0 10 0;

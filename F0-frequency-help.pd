@@ -1,0 +1,12 @@
+#N canvas 174 307 450 300 10;
+#X text 20 7 Captures a source \, extracts the fundamental frequency
+using bandpass filters and then shrink the range of the values to a
+range of 1 to 64;
+#X obj 98 77 adc~;
+#X msg 257 118 \; pd dsp 1;
+#X obj 256 74 loadbang;
+#X obj 101 115 F0-frequency;
+#X floatatom 103 166 5 0 0 0 - - -;
+#X connect 1 0 4 0;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
