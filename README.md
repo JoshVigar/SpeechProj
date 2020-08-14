@@ -1,4 +1,4 @@
-# SpeechProj
+# Pure Data Vocoder
 
 A Pure Data speech vocoder.
 
